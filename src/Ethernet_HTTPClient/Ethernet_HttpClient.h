@@ -78,8 +78,9 @@ static const int HTTP_ERROR_INVALID_RESPONSE = -4;
 
 // Number of milliseconds that we wait each time there isn't any data
 // available to be read (during status code and header processing)
+#ifndef kHttpWaitForDataDelay
 #define kHttpWaitForDataDelay     1000L
-
+#endif
 // Number of milliseconds that we'll wait in total without receiveing any
 // data before returning HTTP_ERROR_TIMED_OUT (during status code and header
 // processing)
